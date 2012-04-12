@@ -3,7 +3,7 @@ require 'open-uri'
 class Sandwich < ActiveRecord::Base
 	belongs_to :user
 	validates :kind, presence: true, inclusion: { in: %w(Meaty Vegetarian Vegan) }
-	#validates :rating, inclusion: { in: 1..5 }
+	validates :rating, inclusion: { in: 1..5 }, if: :rating
 
 	after_create do |sandwich|
 		sandwich.order

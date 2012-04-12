@@ -1,10 +1,11 @@
 %h2 Looks tasty...
 %p= "A #{@sandwich.kind} sandwich."
 - if @sandwich.rating
+  %span.star Your rating:
   - @sandwich.rating.times do
-    %span.star= "&#9733;"
+    &#9733;
 - else
-  = form_tag @sandwich, method: 'update' do
-    = label_tag :rating, "How many stars would you rate this sandwich?"
-    = select_tag(:rating, 1..5) 
-    = submit_tag
+  = form_for @sandwich, :action => 'update', :controller => 'sandwiches' do |f|
+    = f.label :rating, "How many stars would you rate this sandwich?"
+    = f.select(:rating, "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe) 
+    = f.submit "Rate it!"

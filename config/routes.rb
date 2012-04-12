@@ -1,5 +1,13 @@
 MakeSandwich::Application.routes.draw do
-	resources :users
+
+  get "static_pages/home"
+
+	resources :users, :sessions
+
+	match '/signup' => 'users#new'
+	match '/signin' => 'sessions#new'
+
+	root :to => 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

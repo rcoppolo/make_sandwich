@@ -1,5 +1,5 @@
 #header
-  %h1= link_to "Make_Sandwich", root_url
+  %h1= link_to image_tag('http://images3.wikia.nocookie.net/__cb20120229022053/adventuretimewithfinnandjake/images/5/58/Dancing_sandwich.gif'), root_url
   - if current_user
     %h4= link_to "Sign out", signout_path, :method => :delete
     %h4= link_to "Your sandwiches", sandwiches_path

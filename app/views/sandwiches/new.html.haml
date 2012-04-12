@@ -1,5 +1,10 @@
-%h2 Design your sandwich:
 = form_for @sandwich, url: {action: "create"} do |f|
-  = f.select(:kind, [["Meaty","Meaty"],["Vegetarian","Vegetarian"],["Vegan :(","Vegan"]])
-  = f.hidden_field :user_id, value: current_user.id
-  = f.submit "Make that sandwich!"
+  .field
+    = f.label :kind, 'What "kind" of sandwich do you want?'
+    = f.select(:kind, [["Meaty","Meaty"],["Vegetarian","Vegetarian"],["Vegan :(","Vegan"]])
+  .field
+    = f.label :description, "Describe your dream sandwich in detail:"
+    = f.text_area :description
+    = f.hidden_field :user_id, value: current_user.id
+  .field
+    = f.submit "Order this sandwich!"

@@ -29,4 +29,15 @@ class SandwichesController < ApplicationController
 			render :action => 'new'
 		end
 	end
+
+	def update
+		@sandwich = Sandwich.find(params[:id])
+		if @sandwich.update_attributes(params[:sandwich])
+			flash[:success] = "Thanks for the rating!"
+			redirect_to @sandwich
+		else
+			flash[:error] = "We messed up the rating. Try again."
+			redirect_to @sandwich
+		end
+	end
 end

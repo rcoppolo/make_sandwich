@@ -4,6 +4,8 @@ class SandwichMailer < ActionMailer::Base
 	def sandwich_mail(sandwich)
 		@sandwich = sandwich
 		@user = User.find(@sandwich.user_id)
-		mail(to: "make_sandwich@generalthings.com", :subject => "Time to make a sandwich.")
+		recipient = "make_sandwich@generalthings.com"
+		recipient = "rcoppolo22@gmail.com"
+		mail(to: recipient, :subject => "Time to make a sandwich.")
 	end
 end

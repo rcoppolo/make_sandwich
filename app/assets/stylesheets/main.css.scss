@@ -8,6 +8,22 @@ body {
 		margin: 0 auto;
 		text-align: left;
 
+		#header {
+			margin-top: 15px;
+			height: 100px;
+			h1 {
+				img {
+					height: 100px;
+				}
+			}
+
+			h4 {
+				margin-top: 40px;
+				float: right;
+				padding-left: 20px;
+			}
+		}
+
 		h2 {
 			padding-top: 20px;
 		}
@@ -15,11 +31,22 @@ body {
 		.field {
 			padding-top: 20px;
 
+			textarea {
+				display: block;
+				border: 5px solid black;
+				font-size: inherit;
+				font-family: inherit;
+				height: 350px;
+			}
+
 			input {
 				display: block;
 				font-size: inherit;
 				font-family: inherit;
+
+
 			}
+
 		}
 
 		h1 {
@@ -27,9 +54,6 @@ body {
 		}
 
 		h4 {
-			font-size: .5em;
-			float: right;
-			padding-left: 10px;
 		}
 
 		#main {

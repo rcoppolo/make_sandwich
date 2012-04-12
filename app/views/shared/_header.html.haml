@@ -1,6 +1,6 @@
 %h1= link_to "Make_Sandwich", root_url
 - if current_user
-  = link_to "Sign out", signout_path, :method => :delete
+  %h4= link_to "Sign out", signout_path, :method => :delete
 - else
-  = link_to "Sign up", signup_path
-  = link_to "Sign in", signin_path
+  %h4= link_to "Sign up", signup_path
+  %h4= link_to "Sign in", signin_path

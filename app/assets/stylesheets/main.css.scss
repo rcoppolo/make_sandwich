@@ -1,0 +1,26 @@
+body {
+	font-size: 1.2em;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+
+	#wrapper {
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: left;
+
+		h1 {
+			float: left;
+		}
+
+		h4 {
+			font-size: .5em;
+			float: right;
+			padding-left: 10px;
+		}
+
+		#main {
+			clear: both;
+
+		}
+	}
+}

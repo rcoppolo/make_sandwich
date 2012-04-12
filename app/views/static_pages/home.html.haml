@@ -1,4 +1,8 @@
 - if current_user
+  %p= "Hey there #{current_user.name}."
   = link_to "Start ordering a sandwich!", new_sandwich_path
 - else
-  %h2 Welcome!
+  %p
+    Welcome! Why not
+    =link_to "sign up", signup_path
+    and start ordering sandwiches?

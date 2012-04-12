@@ -8,7 +8,11 @@ class SandwichesController < ApplicationController
   end
 
   def new
-		@sandwich = Sandwich.new
+		if current_user
+			@sandwich = Sandwich.new
+		else
+			redirect_to signin_path
+		end
   end
 
 	def create

@@ -4,12 +4,17 @@
     %ul.errors
       - for message in @user.errors.full_messages
         %li= message
-  = f.label :name
-  = f.text_field :name
-  = f.label :email
-  = f.text_field :email
-  = f.label :password
-  = f.password_field :password
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
-  = f.submit "Sign me on up then!"
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :password
+    = f.password_field :password
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation
+  .field
+    = f.submit "Sign me on up then!"

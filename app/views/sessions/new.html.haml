@@ -1,7 +1,10 @@
-%h2 Log in here:
+%h2 Sign in here:
 = form_tag sessions_path do
-  = label_tag :email
-  = text_field_tag :email, params[:email]
-  = label_tag :password
-  = password_field_tag :password
-  = submit_tag "Sign in!"
+  .field
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+  .field
+    = label_tag :password
+    = password_field_tag :password
+  .field
+    = submit_tag "Sign in!"

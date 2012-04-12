@@ -10,4 +10,13 @@ class SandwichesController < ApplicationController
   def new
 		@sandwich = Sandwich.new
   end
+
+	def create
+		@sandwich = Sandwich.new(params[:sandwich])
+		if @sandwich.save
+			redirect_to @sandwich
+		else
+			render :action => 'new'
+		end
+	end
 end

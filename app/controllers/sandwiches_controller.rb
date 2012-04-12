@@ -1,6 +1,10 @@
 class SandwichesController < ApplicationController
   def index
-		@sandwiches = Sandwich.all
+		if current_user
+			@sandwiches = current_user.sandwiches
+		else
+			redirect_to signin_path
+		end
   end
 
   def show
@@ -18,7 +22,7 @@ class SandwichesController < ApplicationController
 	def create
 		@sandwich = Sandwich.new(params[:sandwich])
 		if @sandwich.save
-			flash[:success] = "Your sandwich looks terrific!"
+			flash[:success] = "The sandwich makers have been alerted! Your sandwich is on the way!"
 			redirect_to @sandwich
 		else
 			flash[:error] = "There's something wrong with that there sandwich."

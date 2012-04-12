@@ -134,6 +134,7 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    simple-rss (1.2.3)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -167,5 +168,6 @@ DEPENDENCIES
   rspec-rails
   rumi
   sass-rails (~> 3.2.3)
+  simple-rss
   sqlite3
   uglifier (>= 1.0.3)

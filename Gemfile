@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'bcrypt-ruby'
 gem 'rumi'
+gem 'simple-rss'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

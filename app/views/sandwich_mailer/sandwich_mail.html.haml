@@ -1,1 +1,3 @@
 %p= "Make a #{@sandwich.kind} sandwich for #{@user.name}!"
+= image_tag(@sandwich.random_image)
+%p= @sandwich.quote

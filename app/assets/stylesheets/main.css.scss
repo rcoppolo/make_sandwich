@@ -8,6 +8,20 @@ body {
 		margin: 0 auto;
 		text-align: left;
 
+		h2 {
+			padding-top: 20px;
+		}
+
+		.field {
+			padding-top: 20px;
+
+			input {
+				display: block;
+				font-size: inherit;
+				font-family: inherit;
+			}
+		}
+
 		h1 {
 			float: left;
 		}
@@ -24,3 +38,4 @@ body {
 		}
 	}
 }
+

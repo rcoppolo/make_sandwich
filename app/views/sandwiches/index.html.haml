@@ -1,4 +1,3 @@
-%h2 Here are all the sandwiches:
+%h2 Here are all the sandwiches you've ordered:
 - @sandwiches.each do |sandwich|
-  .sandwich
-    %h3= "A tasty #{sandwich.kind} sandwich."
+  %h3= link_to "A #{sandwich.kind} sandwich ordered at #{sandwich.created_at.strftime("%I:%M%p, %m/%d/%Y")}.", sandwich

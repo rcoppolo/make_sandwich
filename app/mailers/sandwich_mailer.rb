@@ -4,6 +4,6 @@ class SandwichMailer < ActionMailer::Base
 	def sandwich_mail(sandwich)
 		@sandwich = sandwich
 		@user = User.find(@sandwich.user_id)
-		mail(to: @user.email, :subject => "Time to make a sandwich.")
+		mail(to: "make_sandwich@generalthings.com", :subject => "Time to make a sandwich.")
 	end
 end

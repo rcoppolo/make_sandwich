@@ -14,8 +14,10 @@ class SandwichesController < ApplicationController
 	def create
 		@sandwich = Sandwich.new(params[:sandwich])
 		if @sandwich.save
+			flash[:success] = "Your sandwich looks terrific!"
 			redirect_to @sandwich
 		else
+			flash[:error] = "There's something wrong with that there sandwich."
 			render :action => 'new'
 		end
 	end

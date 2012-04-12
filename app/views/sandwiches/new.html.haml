@@ -1,0 +1,4 @@
+%h2 Design your sandwich:
+= form_for @sandwich, url: {action: "create"} do |f|
+  = f.select(:kind, [["Meaty","Meaty"],["Vegetarian","Vegetarian"],["Vegan :(","Vegan"]])
+  = f.submit "Make that sandwich!"

@@ -70,7 +70,7 @@ module MakeSandwich
 				:routing_specs => false,
 				:controller_specs => true,
 				:request_spec => true
-			g.fixture_replacement :factory_gril, :dir => 'spec/factories'
+			g.fixture_replacement :factory_girl, :dir => 'spec/factories'
 		end
   end
 end

@@ -8,6 +8,10 @@ gem 'bcrypt-ruby'
 gem 'rumi'
 gem 'simple-rss'
 
+group :production do
+	gem 'pg'
+end
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
